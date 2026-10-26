@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бриф на логотип · DSGNVIKA</title>
+<meta name="description" content="Анкета для разработки логотипа. Займёт 5–15 минут.">
+<meta property="og:title" content="Бриф на логотип · DSGNVIKA">
+<meta property="og:description" content="Несколько вопросов о вашем бизнесе, чтобы логотип получился точным.">
+<meta name="theme-color" content="#EEEDEB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oranienbaum&display=swap">
+<style>
+:root{
+  --bg:#EEEDEB; --ink:#2B2A2A; --muted:#5F5C5C; --line:#CFCBC7;
+  --berry:#863A60; --berry-dark:#5E2843; --berry-soft:#B65484; --tint:#F4E8EE;
+  --field:rgba(255,255,255,.78);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body{min-height:100vh;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.b1{top:-60px;right:-90px;width:300px;height:300px;background:#EBC9D9;opacity:.8}
+.b2{top:45%;left:-130px;width:280px;height:280px;background:#D3DEEA;opacity:.8}
+.b3{bottom:-80px;right:-100px;width:260px;height:260px;background:#DCD8D4}
+.wrap{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;padding:20px 0 14px;border-bottom:1px solid var(--line);font-size:11px;font-weight:500;letter-spacing:.22em}
+.progress{padding:22px 0 0}
+.progress-row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}
+.progress-row i{color:var(--berry)}
+.bars{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.bars span{height:3px;border-radius:2px;background:#D4D0CC;transition:background .3s}
+.bars span.on{background:var(--berry)}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.45em;color:var(--muted)}
+.dash{width:32px;height:2px;background:var(--berry);margin:12px 0}
+h1{margin:4px 0 0;font-family:Oranienbaum,serif;font-weight:400;font-size:40px;line-height:1.05}
+h1 em,.accent{font-style:normal;color:var(--berry)}
+.lead{margin:14px 0 0;font-size:15px;font-weight:300;line-height:1.5;color:var(--muted)}
+.head{padding:32px 0 0}
+.step{display:none}
+.step.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qs{display:flex;flex-direction:column;gap:34px;padding:30px 0 0}
+.q{display:flex;flex-direction:column;gap:12px;border:0;margin:0;padding:0;min-width:0}
+.q-title{display:flex;gap:10px;align-items:baseline;font-family:Oranienbaum,serif;font-size:23px;line-height:1.2;padding:0}
+.q-title b{font-family:Inter,sans-serif;font-size:12px;font-weight:500;color:var(--berry)}
+.q-title small{font-family:Inter,sans-serif;font-size:12px;font-weight:300;color:var(--muted)}
+.hint{margin:0;font-size:14px;font-weight:300;line-height:1.45;color:var(--muted)}
+.tip{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--berry)}
+.tip:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--berry-soft);flex:none}
+input[type=text],input[type=email],textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--field);font:300 16px/1.5 Inter,sans-serif;color:var(--ink);outline:none;transition:border-color .2s}
+input[type=text]{height:52px;padding:0 16px}
+textarea{resize:vertical;min-height:96px}
+input:focus,textarea:focus{border-color:var(--berry)}
+::placeholder{color:#8A8686}
+.box{padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.55);font-size:14px;font-weight:300;line-height:1.55;color:var(--muted)}
+.box p{margin:0 0 6px}
+.box .ex{color:var(--ink);font-weight:400}
+.box .ex span{color:var(--berry)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--field);color:var(--ink);font:400 14px Inter,sans-serif;cursor:pointer;transition:all .15s}
+.chip[aria-pressed=true]{background:var(--berry);border-color:var(--berry);color:#fff}
+.chip:disabled{opacity:.45;cursor:default}
+.opt{display:flex;gap:12px;align-items:center;min-height:52px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--field);font-size:15px;cursor:pointer}
+.opt:has(input:checked){border-color:var(--berry)}
+.opt input{width:18px;height:18px;margin:0;accent-color:var(--berry);flex:none}
+.sub{display:none}
+.sub.show{display:block}
+.counter{display:flex;justify-content:space-between;font-size:14px;font-weight:300;color:var(--muted)}
+.counter b{font-weight:500;color:var(--berry)}
+.own{height:48px!important;border-style:dashed!important;border-color:var(--berry-soft)!important;border-radius:999px!important;background:rgba(255,255,255,.6)!important;font-size:15px!important}
+.upload{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 16px;border:1.5px dashed var(--berry-soft);border-radius:14px;background:rgba(255,255,255,.6);text-align:center;cursor:pointer}
+.upload input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.upload strong{font-size:15px;font-weight:500;color:var(--berry)}
+.upload span{font-size:12px;color:var(--muted)}
+.files{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink)}
+.files div{display:flex;justify-content:space-between;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.7)}
+.files button{border:0;background:none;color:var(--berry);font-size:16px;cursor:pointer;padding:0 4px}
+.pack{display:flex;flex-direction:column;gap:14px;padding:22px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.65);cursor:pointer;transition:all .2s}
+.pack:has(input:checked){border:2px solid var(--berry);background:rgba(255,255,255,.88);box-shadow:0 10px 30px rgba(134,58,96,.10)}
+.pack-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pack-name{font-family:Oranienbaum,serif;font-size:30px;line-height:1}
+.pack-price{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:500;color:var(--berry)}
+.pack-price input{width:20px;height:20px;margin:0;accent-color:var(--berry)}
+.pack p{margin:0;font-size:15px;line-height:1.45}
+.need{padding:12px 14px;border-radius:12px;background:#ECEAE7;font-size:14px;font-weight:300;line-height:1.5}
+.pack:has(input:checked) .need{background:var(--tint)}
+.need b{font-weight:500;color:var(--berry)}
+.label{font-size:11px;font-weight:500;letter-spacing:.3em;color:var(--muted)}
+.pack ul{display:flex;flex-direction:column;gap:8px;margin:0;padding:0 0 0 18px;font-size:14px;font-weight:300;line-height:1.45}
+.term{padding-top:12px;border-top:1px solid #E2DEDA;font-size:14px;line-height:1.45}
+.term b{font-weight:500}.term span{font-weight:300}
+.kinds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kind{display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--field);cursor:pointer}
+.kind:has(input:checked){border:2px solid var(--berry);padding:11px}
+.kind .pic{display:flex;align-items:center;justify-content:center;gap:8px;height:86px;border-radius:10px;background:#F2F0EE}
+.kind .lbl{display:flex;gap:8px;align-items:center;font-size:13px}
+.kind input{width:16px;height:16px;margin:0;accent-color:var(--berry)}
+.sep{display:flex;align-items:center;gap:12px}
+.sep:before,.sep:after{content:"";flex:1;height:1px;background:var(--line)}
+.sep span{font-size:11px;font-weight:500;letter-spacing:.3em;color:var(--muted)}
+.terms{padding:14px 16px;border-radius:12px;background:var(--tint);font-size:13px;font-weight:300;line-height:1.55}
+.nav{display:flex;gap:10px;padding:30px 0 0}
+.btn{height:56px;padding:0 22px;border-radius:999px;font:500 15px Inter,sans-serif;letter-spacing:.04em;cursor:pointer;transition:background .2s}
+.btn-ghost{border:1px solid var(--line);background:transparent;color:var(--ink);font-weight:400}
+.btn-main{flex:1;border:0;background:var(--berry);color:#fff}
+.btn-main:hover{background:var(--berry-dark)}
+.btn-main:disabled{opacity:.6;cursor:default}
+.err{display:none;margin:12px 0 0;padding:12px 14px;border-radius:12px;background:#F8E3E3;color:#8A1F1F;font-size:14px;line-height:1.45}
+.err.show{display:block}
+.invalid{border-color:#B3261E!important}
+.foot{display:flex;justify-content:space-between;align-items:center;margin:44px 0 28px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;font-weight:500;letter-spacing:.22em}
+.foot i{font-weight:400;letter-spacing:.04em;color:var(--berry)}
+.num{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--berry-soft);color:#fff;font-size:12px;letter-spacing:0}
+.thanks{min-height:60vh;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:40px 8px}
+.check{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:var(--berry)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div class="blob b1" aria-hidden="true"></div>
+<div class="blob b2" aria-hidden="true"></div>
+<div class="blob b3" aria-hidden="true"></div>
+
+<main class="wrap">
+<div class="top"><span>DSGNVIKA</span><span>LOGO DESIGN</span></div>
+
+<div class="progress" id="progress">
+  <div class="progress-row"><span id="stepLabel">Шаг 1 из 3</span><i id="stepWord">about you</i></div>
+  <div class="bars"><span class="on"></span><span></span><span></span></div>
+</div>
+
+<form id="brief" novalidate>
+
+<!-- ШАГ 1 -->
+<section class="step active" data-step="1">
+  <div class="head">
+    <div class="eyebrow">АНКЕТА</div>
+    <div class="dash"></div>
+    <h1>Бриф <em>на логотип</em></h1>
+    <p class="lead">Несколько вопросов о вашем бизнесе, чтобы логотип получился точным. Займёт 5–15 минут, удобно заполнять с телефона.</p>
+  </div>
+  <div class="qs">
+    <div class="q">
+      <label class="q-title" for="name"><b>01</b>Как вас зовут?</label>
+      <input type="text" id="name" name="Имя" placeholder="Имя" autocomplete="given-name" required>
+    </div>
+    <div class="q">
+      <label class="q-title" for="contact"><b>02</b>Как с вами связаться?</label>
+      <p class="hint">Выберите мессенджер и напишите номер или ник</p>
+      <div class="chips" data-single="Мессенджер">
+        <button type="button" class="chip" aria-pressed="false">Telegram</button>
+        <button type="button" class="chip" aria-pressed="false">WhatsApp</button>
+        <button type="button" class="chip" aria-pressed="false">Макс</button>
+        <button type="button" class="chip" aria-pressed="false">Instagram</button>
+        <button type="button" class="chip" aria-pressed="false">ВК</button>
+        <button type="button" class="chip" aria-pressed="false">Почта</button>
+      </div>
+      <input type="text" id="contact" name="Контакт" placeholder="@ник, номер телефона или почта" required>
+    </div>
+    <div class="q">
+      <label class="q-title" for="title"><b>03</b>Название вашего будущего логотипа</label>
+      <p class="hint">Напишите точно так, как оно должно выглядеть: с заглавными буквами, кавычками, дефисами</p>
+      <input type="text" id="title" name="Название" placeholder="Например: «Ласточка»" required>
+    </div>
+    <fieldset class="q">
+      <legend class="q-title"><b>04</b>Нужен ли дескриптор?</legend>
+      <div class="box">
+        <p>Дескриптор — короткая подпись под названием, которая объясняет, чем вы занимаетесь. Особенно полезен, если по названию непонятно, что вы делаете.</p>
+        <div class="ex">Солнышко — <span>детский сад</span><br>Ласточка — <span>кондитерская</span><br>Мастер — <span>ремонт обуви</span></div>
+      </div>
+      <label class="opt"><input type="radio" name="Дескриптор" value="Да" data-toggle="descText">Да, вот текст:</label>
+      <div class="sub" id="descText"><input type="text" name="Текст дескриптора" aria-label="Текст дескриптора" placeholder="Например: кондитерская"></div>
+      <label class="opt"><input type="radio" name="Дескриптор" value="Не нужен" data-toggle="">Нет, не нужен</label>
+    </fieldset>
+    <div class="q">
+      <label class="q-title" for="biz"><b>05</b>Чем вы занимаетесь и что продаёте?</label>
+      <p class="hint">Например: «Пеку торты на заказ для детских праздников» или «Ремонт квартир под ключ в Казани»</p>
+      <textarea id="biz" name="Чем занимаетесь" rows="3" placeholder="Пара предложений" required></textarea>
+    </div>
+  </div>
+  <div class="err" role="alert"></div>
+  <div class="nav"><button type="button" class="btn btn-main" data-next>Далее — выбор пакета</button></div>
+</section>
+
+<!-- ШАГ 2 -->
+<section class="step" data-step="2">
+  <div class="head">
+    <div class="eyebrow"><span class="accent" style="letter-spacing:0">06</span>&nbsp;&nbsp;ВЫБОР</div>
+    <h1 style="font-size:36px;margin-top:14px">Какой вариант <em>вам подходит?</em></h1>
+  </div>
+  <fieldset class="qs" style="gap:16px;padding-top:24px;border:0;margin:0">
+    <legend class="vh">Пакет</legend>
+    <label class="pack">
+      <div class="pack-head"><span class="pack-name">Лайт</span><span class="pack-price">9 000 ₽<input type="radio" name="Пакет" value="Лайт · 9 000 ₽"></span></div>
+      <p>Для тех, у кого уже есть эскиз, готовое решение или чёткая идея.</p>
+      <div class="need"><b>Для старта понадобится:</b> эскиз — набросок от руки, рисунок в любой программе или фото — либо подробное описание идеи и примеры логотипов, которые нравятся.</div>
+      <div class="label">ЧТО ВХОДИТ</div>
+      <ul>
+        <li>проверка вашей идеи: читаемость, мелкие детали, сходство с чужими логотипами</li>
+        <li>отрисовка в векторе и подбор шрифта</li>
+        <li>1 вариант по вашему эскизу и доработка по замечаниям</li>
+        <li>презентация с примерами применения</li>
+        <li>версии: основная, чёрно-белая, инверсная</li>
+        <li>файлы для печати и соцсетей: вектор, PNG, JPEG</li>
+      </ul>
+      <div class="term"><b>Срок:</b> <span>3–5 рабочих дней, точный — после изучения брифа</span></div>
+    </label>
+    <label class="pack">
+      <div class="pack-head"><span class="pack-name">Стандарт</span><span class="pack-price">16 000 ₽<input type="radio" name="Пакет" value="Стандарт · 16 000 ₽"></span></div>
+      <p>Для тех, кому нужно разработать логотип с нуля.</p>
+      <div class="need"><b>Для старта понадобится:</b> ответить на вопросы о бизнесе и клиентах и прислать примеры логотипов, которые нравятся. Рисовать ничего не нужно.</div>
+      <div class="label">ЧТО ВХОДИТ</div>
+      <ul>
+        <li>анализ 3–4 ваших конкурентов</li>
+        <li>концепция и мудборд</li>
+        <li>эскизы от руки, 2 варианта на выбор</li>
+        <li>показ вариантов на вывеске, визитке, в профиле</li>
+        <li>доработка выбранного варианта</li>
+        <li>версии: основная, сокращённая, чёрно-белая, инверсная</li>
+        <li>файлы для печати и соцсетей: вектор, PNG, JPEG</li>
+      </ul>
+      <div class="term"><b>Срок:</b> <span>1–2 недели, точный — после изучения брифа</span></div>
+    </label>
+  </fieldset>
+  <div class="err" role="alert"></div>
+  <div class="nav"><button type="button" class="btn btn-ghost" data-back>Назад</button><button type="button" class="btn btn-main" data-next>Далее</button></div>
+</section>
+
+<!-- ШАГ 3: ЛАЙТ -->
+<section class="step" data-step="3" data-branch="lite">
+  <div class="head">
+    <div class="eyebrow">ПАКЕТ ЛАЙТ</div>
+    <div class="dash"></div>
+    <h1 style="font-size:34px">Расскажите <em>о вашей идее</em></h1>
+  </div>
+  <div class="qs">
+    <div class="q">
+      <div class="q-title"><b>07</b>Загрузите ваш эскиз</div>
+      <p class="hint">Набросок от руки на бумаге, рисунок в любой программе или фото — подойдёт любой вариант. Если эскиза нет, опишите идею словами.</p>
+      <label class="upload"><strong>Загрузить фото или файл</strong><span>JPG, PNG, PDF · до 10 МБ каждый</span><input type="file" multiple accept="image/*,.pdf" data-files="Эскиз"></label>
+      <div class="files"></div>
+      <textarea name="Идея словами" rows="3" aria-label="Описание идеи" placeholder="Или опишите идею словами"></textarea>
+    </div>
+    <div class="q">
+      <div class="q-title"><b>08</b>Прикрепите 2–3 логотипа, которые вам нравятся</div>
+      <p class="hint">Можно из любой сферы, не обязательно из вашей. Подойдут скриншоты из Pinterest или Instagram.</p>
+      <label class="upload"><strong>Добавить примеры</strong><span>Скриншоты или картинки</span><input type="file" multiple accept="image/*" data-files="Примеры (Лайт)"></label>
+      <div class="files"></div>
+      <textarea name="Что нравится в примерах (Лайт)" rows="3" aria-label="Что нравится в примерах" placeholder="Что именно нравится: цвет, шрифт, форма, настроение"></textarea>
+    </div>
+    <div class="q">
+      <label class="q-title" for="l9"><b>09</b>Что в эскизе или идее обязательно сохранить?</label>
+      <p class="hint">Например: форму знака, конкретный шрифт, цвет, расположение элементов. А что можно менять на моё усмотрение?</p>
+      <textarea id="l9" name="Что сохранить" rows="3"></textarea>
+    </div>
+    <div class="q">
+      <div class="q-title"><b>10</b>Где логотип будет использоваться чаще всего?</div>
+      <p class="hint">Можно выбрать несколько вариантов</p>
+      <div class="chips" data-multi="Где используется (Лайт)" data-items="аватарка в соцсетях|вывеска|упаковка и этикетки|визитки и печать|сайт|одежда и мерч|другое"></div>
+    </div>
+    <div class="q">
+      <label class="q-title" for="l11"><b>11</b>Пожелания по цветам</label>
+      <p class="hint">Какие цвета хотелось бы видеть в логотипе? Каких цветов точно не нужно? Если нет пожеланий — так и напишите, подберу сама.</p>
+      <textarea id="l11" name="Цвета (Лайт)" rows="3"></textarea>
+    </div>
+    <div class="q">
+      <div class="q-title"><b>12</b>Каким должен восприниматься ваш бренд?</div>
+      <div class="counter"><span>Выберите 3 слова</span><b>0 из 3</b></div>
+      <div class="chips" data-limit="3" data-multi="Характер бренда (Лайт)" data-items="тёплый|надёжный|современный|премиальный|дерзкий|нежный|традиционный|простой|строгий|весёлый|элегантный|дружелюбный|природный|смелый|уютный"></div>
+      <input type="text" class="own" name="Своё слово (Лайт)" aria-label="Своё слово" placeholder="+ Своё слово (дополнительно)">
+    </div>
+  </div>
+</section>
+
+<!-- ШАГ 3: СТАНДАРТ -->
+<section class="step" data-step="3" data-branch="std">
+  <div class="head">
+    <div class="eyebrow">ПАКЕТ СТАНДАРТ</div>
+    <div class="dash"></div>
+    <h1 style="font-size:34px">Расскажите <em>о вашем бизнесе</em></h1>
+  </div>
+  <div class="qs">
+    <fieldset class="q">
+      <legend class="q-title"><b>07</b>Где вы работаете?</legend>
+      <label class="opt"><input type="radio" name="Где работаете" value="В одном городе" data-toggle="cityBox">в одном городе</label>
+      <div class="sub" id="cityBox"><input type="text" name="Город" aria-label="Город" placeholder="Какой город?"></div>
+      <label class="opt"><input type="radio" name="Где работаете" value="Несколько городов / регион" data-toggle="">в нескольких городах или по региону</label>
+      <label class="opt"><input type="radio" name="Где работаете" value="Онлайн по всей России" data-toggle="">онлайн, по всей России</label>
+      <label class="opt"><input type="radio" name="Где работаете" value="Офлайн и онлайн" data-toggle="">и офлайн, и онлайн</label>
+    </fieldset>
+    <div class="q">
+      <label class="q-title" for="s8"><b>08</b>Почему клиенты выбирают вас?</label>
+      <div class="tip">Из этого вырастет идея логотипа</div>
+      <textarea id="s8" name="Почему выбирают" rows="3" placeholder="Например: «Печём на закваске по старым семейным рецептам»"></textarea>
+    </div>
+    <div class="q">
+      <label class="q-title" for="s9"><b>09</b>Кто ваш клиент?</label>
+      <div class="tip">Логотип должен нравиться покупателям</div>
+      <textarea id="s9" name="Кто клиент" rows="3" placeholder="Например: «Мамы 25–40 лет, заказывают торты на дни рождения детей» или «Владельцы квартир в новостройках, делают первый ремонт»"></textarea>
+    </div>
+    <div class="q">
+      <div class="q-title"><b>10</b>Где клиенты впервые видят вас?</div>
+      <div class="tip">Там логотип должен работать лучше всего</div>
+      <p class="hint">Можно выбрать несколько вариантов</p>
+      <div class="chips" data-multi="Где видят впервые" data-items="Instagram|Telegram|ВК|вывеска на улице|маркетплейс|сайт|по рекомендации|другое"></div>
+    </div>
+    <div class="q">
+      <label class="q-title" for="s11"><b>11</b>Ваши конкуренты</label>
+      <p class="hint">Назовите 3–4 конкурентов или пришлите ссылки на их страницы. Что вам нравится и что не нравится в их логотипах и оформлении?</p>
+      <textarea id="s11" name="Конкуренты" rows="3"></textarea>
+      <label class="upload" style="padding:16px"><strong>Прикрепить скриншоты</strong><input type="file" multiple accept="image/*" data-files="Конкуренты"></label>
+      <div class="files"></div>
+    </div>
+    <div class="q">
+      <div class="q-title"><b>12</b>Прикрепите 2–3 логотипа, которые вам нравятся</div>
+      <p class="hint">Можно из любой сферы, не обязательно из вашей. Подойдут скриншоты из Pinterest или Instagram.</p>
+      <label class="upload"><strong>Добавить примеры</strong><span>Скриншоты или картинки</span><input type="file" multiple accept="image/*" data-files="Примеры (Стандарт)"></label>
+      <div class="files"></div>
+      <textarea name="Что нравится в примерах (Стандарт)" rows="3" aria-label="Что нравится в примерах" placeholder="Что именно нравится: цвет, шрифт, форма, настроение"></textarea>
+    </div>
+    <div class="q">
+      <div class="q-title"><b>13</b>Каким должен восприниматься ваш бренд?</div>
+      <div class="counter"><span>Выберите 3 слова</span><b>0 из 3</b></div>
+      <div class="chips" data-limit="3" data-multi="Характер бренда (Стандарт)" data-items="тёплый|надёжный|современный|премиальный|дерзкий|нежный|традиционный|простой|строгий|весёлый|элегантный|дружелюбный|природный|смелый|уютный"></div>
+      <input type="text" class="own" name="Своё слово (Стандарт)" aria-label="Своё слово" placeholder="+ Своё слово (дополнительно)">
+    </div>
+    <fieldset class="q">
+      <legend class="q-title"><b>14</b>Есть ли у вас сейчас логотип?</legend>
+      <label class="opt"><input type="radio" name="Текущий логотип" value="Нет, первый" data-toggle="">Нет, это первый логотип</label>
+      <label class="opt"><input type="radio" name="Текущий логотип" value="Да, есть" data-toggle="oldLogo">Да, есть</label>
+      <div class="sub" id="oldLogo">
+        <div class="q">
+          <label class="upload" style="padding:16px"><strong>Загрузить текущий логотип</strong><input type="file" multiple accept="image/*,.pdf" data-files="Текущий логотип"></label>
+          <div class="files"></div>
+          <textarea name="Что сохранить / изменить" rows="3" aria-label="Что сохранить и что изменить" placeholder="Что хотелось бы сохранить, а что изменить"></textarea>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="q">
+      <legend class="q-title"><b>15</b>Какой вид логотипа вам ближе?</legend>
+      <div class="kinds">
+        <label class="kind"><div class="pic" aria-hidden="true" style="font-family:Oranienbaum,serif;font-size:22px">Ласточка</div><span class="lbl"><input type="radio" name="Вид логотипа" value="Только надпись">только надпись</span></label>
+        <label class="kind"><div class="pic" aria-hidden="true"><span style="width:26px;height:26px;border-radius:50% 50% 50% 0;background:var(--berry)"></span><span style="font-family:Oranienbaum,serif;font-size:18px">Ласточка</span></div><span class="lbl"><input type="radio" name="Вид логотипа" value="Знак + надпись">знак + надпись</span></label>
+        <label class="kind"><div class="pic" aria-hidden="true"><span style="display:flex;align-items:center;justify-content:center;width:68px;height:68px;border:2px solid var(--ink);border-radius:50%;font-family:Oranienbaum,serif;font-size:11px;letter-spacing:.08em">ЛАСТОЧКА</span></div><span class="lbl"><input type="radio" name="Вид логотипа" value="Эмблема">эмблема</span></label>
+        <label class="kind"><div class="pic" aria-hidden="true" style="background:var(--tint);font-size:13px;font-weight:300;text-align:center;color:var(--berry)">выберу<br>лучший вариант</div><span class="lbl"><input type="radio" name="Вид логотипа" value="Доверяю дизайнеру">доверяю вам</span></label>
+      </div>
+      <p class="hint" style="font-size:12px">Эмблема — надпись внутри формы, как печать или герб</p>
+    </fieldset>
+    <div class="q">
+      <div class="q-title"><b>16</b>Где логотип будет использоваться чаще всего?</div>
+      <p class="hint">Можно выбрать несколько вариантов</p>
+      <div class="chips" data-multi="Где используется (Стандарт)" data-items="аватарка в соцсетях|вывеска|упаковка и этикетки|визитки и печать|сайт|одежда и мерч|другое"></div>
+    </div>
+    <div class="q">
+      <label class="q-title" for="s17"><b>17</b>Пожелания по цветам</label>
+      <p class="hint">Какие цвета хотелось бы видеть в логотипе? Каких цветов точно не нужно? Если нет пожеланий — так и напишите, подберу сама.</p>
+      <textarea id="s17" name="Цвета (Стандарт)" rows="3"></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ОБЩИЙ КОНЕЦ (виден на шаге 3) -->
+<section id="finale" style="display:none">
+  <div class="qs">
+    <div class="sep"><span>ПОСЛЕДНЕЕ</span></div>
+    <div class="q">
+      <label class="q-title" for="f1">Чего точно не должно быть в логотипе?</label>
+      <p class="hint">Цвета, образы, шрифты, ассоциации. Например: «Никаких кексов и розового», «Не хочу ничего похожего на логотип конкурента».</p>
+      <textarea id="f1" name="Чего не должно быть" rows="3"></textarea>
+    </div>
+    <div class="q">
+      <label class="q-title" for="f2">Что ещё важно знать? <small>необязательно</small></label>
+      <textarea id="f2" name="Что ещё важно" rows="3" placeholder="Всё, что не вошло в вопросы выше"></textarea>
+    </div>
+    <div class="terms">Предоплата 50%, остаток — перед передачей файлов. Права на логотип переходят к вам после полной оплаты.</div>
+  </div>
+  <div class="err" role="alert"></div>
+  <div class="nav"><button type="button" class="btn btn-ghost" data-back>Назад</button><button type="submit" class="btn btn-main" id="send">Отправить</button></div>
+</section>
+
+<!-- СПАСИБО -->
+<section class="step" data-step="4">
+  <div class="thanks">
+    <div class="check"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div class="eyebrow">ГОТОВО</div>
+    <h1 style="font-size:46px">Спасибо! <em>Анкета получена</em></h1>
+    <p class="lead">Напишу вам в течение дня.</p>
+  </div>
+</section>
+
+</form>
+
+<div class="foot"><span>THE BRIEF · <i id="footWord">about you</i></span><span class="num" id="footNum">01</span></div>
+</main>
+
+<script>
+/* Адрес приёма заявок (Google Apps Script → Telegram) */
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwPwdLM2gLTO20XTkYIStvp55ywTDI6-kEz2cjxHjy03z9fm442zp9ygeg3lgPavpZQpQ/exec';
+
+const form = document.getElementById('brief');
+const steps = [...document.querySelectorAll('.step')];
+const finale = document.getElementById('finale');
+const words = {1:'about you',2:'your package',3:'your brand',4:'thank you'};
+let current = 1;
+const files = {};
+
+/* плашки из data-items */
+document.querySelectorAll('[data-items]').forEach(box => {
+  box.dataset.items.split('|').forEach(t => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.textContent = t; b.setAttribute('aria-pressed','false');
+    box.appendChild(b);
+  });
+});
+
+/* выбор плашек */
+document.querySelectorAll('.chips').forEach(box => {
+  const limit = +box.dataset.limit || 0;
+  const single = box.hasAttribute('data-single');
+  box.addEventListener('click', e => {
+    const chip = e.target.closest('.chip'); if (!chip) return;
+    const on = chip.getAttribute('aria-pressed') === 'true';
+    if (single) box.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed','false'));
+    chip.setAttribute('aria-pressed', String(!on));
+    if (limit) {
+      const n = box.querySelectorAll('[aria-pressed=true]').length;
+      box.querySelectorAll('.chip').forEach(c => { c.disabled = n >= limit && c.getAttribute('aria-pressed') !== 'true'; });
+      const counter = box.parentElement.querySelector('.counter b');
+      if (counter) counter.textContent = n + ' из ' + limit;
+    }
+  });
+});
+
+/* раскрывающиеся поля у вариантов */
+form.addEventListener('change', e => {
+  const t = e.target;
+  if (t.type === 'radio' && t.hasAttribute('data-toggle')) {
+    form.querySelectorAll(`input[name="${t.name}"]`).forEach(r => {
+      const id = r.dataset.toggle; if (id) document.getElementById(id).classList.toggle('show', r.checked);
+    });
+  }
+});
+
+/* загрузка файлов */
+document.querySelectorAll('input[data-files]').forEach(inp => {
+  const key = inp.dataset.files;
+  const list = inp.closest('.upload').nextElementSibling;
+  files[key] = [];
+  const render = () => {
+    list.innerHTML = '';
+    files[key].forEach((f, i) => {
+      const row = document.createElement('div');
+      row.innerHTML = '<span></span><button type="button" aria-label="Удалить файл">×</button>';
+      row.firstChild.textContent = f.name;
+      row.lastChild.onclick = () => { files[key].splice(i,1); render(); };
+      list.appendChild(row);
+    });
+  };
+  inp.addEventListener('change', () => {
+    [...inp.files].forEach(f => {
+      if (f.size > 10 * 1024 * 1024) { alertErr('Файл «' + f.name + '» больше 10 МБ'); return; }
+      files[key].push(f);
+    });
+    inp.value = ''; render();
+  });
+});
+
+function branch() {
+  const p = form.querySelector('input[name="Пакет"]:checked');
+  return p && p.value.startsWith('Стандарт') ? 'std' : 'lite';
+}
+
+function show(n) {
+  current = n;
+  steps.forEach(s => s.classList.toggle('active', +s.dataset.step === n && (!s.dataset.branch || s.dataset.branch === branch())));
+  finale.style.display = n === 3 ? 'block' : 'none';
+  const bars = document.querySelectorAll('.bars span');
+  bars.forEach((b,i) => b.classList.toggle('on', i < Math.min(n,3)));
+  document.getElementById('progress').style.display = n === 4 ? 'none' : '';
+  document.getElementById('stepLabel').textContent = 'Шаг ' + Math.min(n,3) + ' из 3' + (n === 3 ? (branch()==='std' ? ' · Стандарт' : ' · Лайт') : '');
+  document.getElementById('stepWord').textContent = words[n];
+  document.getElementById('footWord').textContent = words[n];
+  document.getElementById('footNum').textContent = '0' + n;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function alertErr(msg, scope) {
+  const box = (scope || document).querySelector('.err');
+  if (!box) return;
+  box.textContent = msg; box.classList.toggle('show', !!msg);
+}
+
+function validate(n) {
+  const sec = document.querySelector(`.step[data-step="${n}"]`);
+  if (n === 1) {
+    let ok = true;
+    ['name','contact','title','biz'].forEach(id => {
+      const el = document.getElementById(id);
+      const bad = !el.value.trim(); el.classList.toggle('invalid', bad); if (bad) ok = false;
+    });
+    alertErr(ok ? '' : 'Пожалуйста, заполните имя, контакт, название и чем вы занимаетесь.', sec);
+    return ok;
+  }
+  if (n === 2) {
+    const ok = !!form.querySelector('input[name="Пакет"]:checked');
+    alertErr(ok ? '' : 'Выберите пакет: Лайт или Стандарт.', sec);
+    return ok;
+  }
+  return true;
+}
+
+form.addEventListener('input', e => e.target.classList.remove('invalid'));
+document.querySelectorAll('[data-next]').forEach(b => b.onclick = () => { if (validate(current)) show(current + 1); });
+document.querySelectorAll('[data-back]').forEach(b => b.onclick = () => show(current - 1));
+
+function readFile(f) {
+  return new Promise(res => {
+    const r = new FileReader();
+    r.onload = () => res({name: f.name, type: f.type, data: String(r.result).split(',')[1]});
+    r.readAsDataURL(f);
+  });
+}
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const br = branch();
+  const data = {'Дата': new Date().toLocaleString('ru-RU')};
+  const scopes = [document.querySelector('.step[data-step="1"]'), document.querySelector('.step[data-step="2"]'),
+    document.querySelector(`.step[data-branch="${br}"]`), finale];
+  scopes.forEach(sc => {
+    sc.querySelectorAll('input[type=text],textarea').forEach(el => { if (el.name && el.value.trim()) data[el.name] = el.value.trim(); });
+    sc.querySelectorAll('input[type=radio]:checked').forEach(el => { data[el.name] = el.value; });
+    sc.querySelectorAll('.chips').forEach(box => {
+      const key = box.dataset.multi || box.dataset.single;
+      const v = [...box.querySelectorAll('[aria-pressed=true]')].map(c => c.textContent);
+      if (key && v.length) data[key] = v.join(', ');
+    });
+  });
+  const btn = document.getElementById('send');
+  btn.disabled = true; btn.textContent = 'Отправляю…';
+  try {
+    if (ENDPOINT) {
+      const attach = [];
+      const scope = document.querySelector(`.step[data-branch="${br}"]`);
+      for (const inp of scope.querySelectorAll('input[data-files]')) {
+        for (const f of files[inp.dataset.files]) attach.push(Object.assign({field: inp.dataset.files}, await readFile(f)));
+      }
+      await fetch(ENDPOINT, {method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify({answers: data, files: attach})});
+    } else {
+      console.log('Анкета (адрес приёма ещё не подключён):', data);
+    }
+    show(4);
+  } catch (err) {
+    alertErr('Не получилось отправить. Проверьте интернет и попробуйте ещё раз.', finale);
+    btn.disabled = false; btn.textContent = 'Отправить';
+  }
+});
+</script>
+</body>
+</html>
